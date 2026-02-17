@@ -3,7 +3,7 @@ name: reviewercouncilgemini
 description: Reviewer council aggregator pinned to Gemini-first model preference.
 tools: ["agent", "read", "search", "execute", "todo"]
 agents: [reviewercodex, reviewersonnet, reviewergemini]
-model: ["Gemini 2.5 Pro (copilot)", "GPT-5.2 (copilot)"]
+model: ["Gemini 3 Pro (Preview) (copilot)", "GPT-5.2 (copilot)"]
 target: vscode
 ---
 

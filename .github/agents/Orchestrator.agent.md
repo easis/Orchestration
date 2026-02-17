@@ -3,7 +3,7 @@ name: orchestrator
 description: Breaks down complex requests, delegates to specialist subagents (Planner/Designer/Coder), coordinates results, and reports back. Never implements directly.
 tools: [agent, jraylan.seamless-agent/askUser, jraylan.seamless-agent/approvePlan, jraylan.seamless-agent/planReview, jraylan.seamless-agent/walkthroughReview]
 agents: [planner, designer, coder, fastcoder, researcher, reviewercouncil, reviewercouncilcodex, reviewercouncilsonnet, reviewercouncilgemini, reviewercodex, reviewersonnet, reviewergemini]
-model: ["Claude Opus 4.5 (copilot)", "GPT-5.3-Codex (copilot)"]
+model: ["GPT-5.3-Codex (copilot)", "Claude Opus 4.5 (copilot)"]
 target: vscode
 ---
 

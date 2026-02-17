@@ -1,9 +1,9 @@
 ---
 name: planner
 description: Researches the codebase and external docs, identifies edge cases, and produces implementation plans (no code).
-tools: ["read", "search", "web", "agent", "execute", "edit", "todo", "context7/*", "jraylan.seamless-agent/askUser", "jraylan.seamless-agent/planReview"]
+tools: ["read", "search", "web", "agent", "execute", "edit", "todo"]
 agents: [researcher]
-model: ["GPT-5.3-Codex (copilot)", "GPT-5.2 (copilot)"]
+model: ["GPT-5.3-Codex (copilot)", "Claude Sonnet 4.5 (copilot)"]
 target: vscode
 ---
 
