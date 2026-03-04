@@ -2,15 +2,17 @@
 
 Coordinate specialized AI agents (Orchestrator, Planner, Designer, Coder) to break down complex tasks, parallelize work, and deliver production-ready code with clear accountability.
 
+**Branch:** This documentation covers the `Free-Orchestration` branch, optimized for free-tier models.
+
 ---
 
 ## Quick Start
 
-1. **Copy agent files**: Clone this repo, copy `.github/agents/` (Orchestrator.agent.md, Planner.agent.md, Designer.agent.md, Coder.agent.md) into your project.
+1. **Copy agent files**: Clone this repo (use the `Free-Orchestration` branch), copy `.github/agents/` (Orchestrator.agent.md, Planner.agent.md, Designer.agent.md, Coder.agent.md) into your project.
 
 2. **Configure VS Code**: Install GitHub Copilot extension (v1.206+) and GitHub Copilot Chat. Open VS Code settings and verify `github.copilot.enable` and `github.copilot.chat.enabled` are true.
 
-3. **Enable experimental sub-agents**: Go to GitHub Copilot extension settings, search for "experimental", and enable `github.copilot.advanced.experimental.subagents`. (Critical: this allows agents to use optimal models.)
+3. **Enable experimental sub-agents**: Go to GitHub Copilot extension settings, search for "experimental", and enable `chat.customAgentInSubagent.enabled`. (Critical: this allows agents to use optimal models.)
 
 4. **Customize agent files**: Update each `.agent.md` with your repo's constraints, patterns, and APIs. Example: Update Coder.agent.md with your stack (C#/WPF, Python, etc.), test framework, build command, and offline-first rules.
 
@@ -59,11 +61,35 @@ The Core 4 are a foundation, not a ceiling. Add custom agents for high-value, re
 
 ---
 
+## Lightweight Agents
+
+For simple or high-frequency tasks, create lightweight agents with a single, focused responsibility (e.g., Linter, Formatter, DocGenerator). These agents use minimal instructions and run on fast, free models. They should never block or duplicate the work of the Core 4.
+
+## Free Model Usage
+
+The Free-Orchestration branch is designed to work with free-tier models (e.g., GPT-3.5, Claude Instant). All agent prompts are optimized for compatibility and speed. For best results, ensure your Copilot settings allow fallback to free models.
+
+## Review Agents
+
+Add review agents to automate code review, plan validation, or spec compliance checks. These agents should run after Coder and before merge, using fast models to catch regressions and enforce standards. Example: PRReviewer.agent.md for automated pull request review.
+
 ## Contributing
 
 Test the pattern on real tasks in your codebase. Share what works: Which delegation patterns are most effective? Where did agents struggle? Open GitHub issues or PRs with results, improved templates, and repo-specific agent prompts. Include task summary, agents used, what went well, what could improve, and suggested changes.
 
 ---
+
+## Branch
+
+This documentation and agent set apply to the `Free-Orchestration` branch. For paid model features, see the main branch.
+
+## PR Checklist
+
+- [ ] All agent files updated as needed (Orchestrator, Planner, Designer, Coder, custom agents)
+- [ ] Plans and specs reviewed before implementation
+- [ ] Tests run and results included
+- [ ] Repo constraints (offline-first, MVVM, etc.) followed
+- [ ] Summary of changes and agent handoffs provided
 
 **Last updated**: February 2026  
 **Status**: Production-tested, evolving based on community feedback
