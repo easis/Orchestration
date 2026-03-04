@@ -2,7 +2,7 @@
 name: designer
 description: Owns UX/UI decisions.
 tools: ["read", "search", "vscode", "edit", "execute", "web", "agent", "todo", "context7/*"]
-model: ["Claude Sonnet 4.5 (copilot)", "GPT-5.2 (copilot)"]
+model: [Gemini 3 Pro (Preview) (copilot)]
 target: vscode
 ---
 
